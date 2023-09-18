@@ -1,10 +1,13 @@
+import CssBaseline from "@mui/material/CssBaseline";
 import "./App.css";
 import { CourseCard } from "./components/CourseCard";
 
 function App() {
 	return (
 		<>
-			<h1>Data School</h1>
+			<CssBaseline enableColorScheme>
+				<h1>Data School</h1>
+			</CssBaseline>
 			<CourseCard />
 		</>
 	);
