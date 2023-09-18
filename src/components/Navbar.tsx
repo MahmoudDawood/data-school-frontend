@@ -16,7 +16,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const pages = ["Home", "Courses", "Instructors", "Blog", "About us"];
+const pages = ["Home", "Courses", "Instructors", "Blog", "About us?"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
@@ -46,8 +46,8 @@ const Navbar = () => {
 					<Typography
 						variant="h6"
 						noWrap
-						component="a"
-						href="/"
+						// component="a"
+						// href="/"
 						sx={{
 							mr: 2,
 							display: { xs: "none", md: "flex" },
@@ -58,7 +58,9 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						DATA SCHOOL
+						<Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+							DATA SCHOOL
+						</Link>
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -110,8 +112,8 @@ const Navbar = () => {
 					<Typography
 						variant="h5"
 						noWrap
-						component="a"
-						href="/"
+						// component="a"
+						// href="/"
 						sx={{
 							mr: 2,
 							display: { xs: "flex", md: "none" },
@@ -123,7 +125,9 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						DATA SCHOOL
+						<Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+							DATA SCHOOL
+						</Link>
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map(page => (
@@ -146,7 +150,7 @@ const Navbar = () => {
 					<Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
 							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt="User" src="/static/images/avatar/2.jpg" />
+								<Avatar alt="User" src="/user-avatar.png" />
 							</IconButton>
 						</Tooltip>
 						<Menu

@@ -3,20 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { Blog, Courses, Home, Instructors } from "./pages";
+import { AboutUs, Blog, Courses, Home, Instructors } from "./pages";
 
 function App() {
+	// TODO: Use a custom theme provider
 	return (
 		<>
 			<CssBaseline enableColorScheme>
 				<Navbar />
-				<h1>Data School</h1>
-
 				<Routes>
 					<Route path="/courses" element={<Courses />} />
 					<Route path="/instructors" element={<Instructors />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/" element={<Home />} />
+					{/* TODO: Add a default landing page 404 */}
 				</Routes>
 				<Footer />
 			</CssBaseline>
