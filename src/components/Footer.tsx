@@ -13,9 +13,7 @@ const Copyright = () => {
 	);
 };
 
-{
-	/* Footer */
-}
+// TODO: Make footer stick to bottom
 
 export const Footer = () => {
 	return (

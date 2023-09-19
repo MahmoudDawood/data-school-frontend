@@ -16,7 +16,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const pages = ["Home", "Courses", "Instructors", "Blog", "About us?"];
+const pages = ["Home", "Courses", "Blog", "About us?"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {

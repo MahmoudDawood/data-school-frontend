@@ -1,4 +1,5 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Filter, Search } from "../components";
 import { CourseCard } from "../components/CourseCard";
 
 export const Courses = () => {
@@ -23,13 +24,11 @@ export const Courses = () => {
 							Courses
 						</Typography>
 						<Typography variant="h5" align="center" color="text.secondary" paragraph>
-							Something short and leading about the collection below—its contents, the
-							creator, etc. Make it short and sweet, but not too short so folks don&apos;t
-							simply skip over it entirely.
+							Explore our courses.
 						</Typography>
 						<Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
-							<Button variant="contained">Main call to action?</Button>
-							<Button variant="outlined">Secondary action?</Button>
+							<Search />
+							<Filter />
 						</Stack>
 					</Container>
 				</Box>
