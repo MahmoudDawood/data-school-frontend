@@ -11,11 +11,19 @@ import { CourseRating } from "./CourseRating";
 
 export const CourseCard = () => {
 	return (
-		<Grid item xs={4}>
-			<Card sx={{ maxWidth: 345 }}>
-				<CardMedia sx={{ height: 140 }} image="/course-image.png" title="Course Image" />
-				<CardContent>
-					<Typography gutterBottom variant="h5" component="div">
+		<Grid item key={"Unique key"} xs={12} sm={6} md={4}>
+			<Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+				<CardMedia
+					component="div"
+					sx={{
+						// 16:9
+						pt: "56.25%",
+					}}
+					image="/course-image.png"
+					title="Course Image"
+				/>
+				<CardContent sx={{ flexGrow: 1 }}>
+					<Typography gutterBottom variant="h5" component="h2">
 						Intermediate Data Analysis
 					</Typography>
 					<Typography variant="body2" color="text.secondary" gutterBottom>

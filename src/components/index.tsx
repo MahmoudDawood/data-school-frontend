@@ -5,3 +5,4 @@ export * from "./Filter";
 export * from "./Footer";
 export * from "./Navbar";
 export * from "./Search";
+export * from "./SearchAndFilter";
