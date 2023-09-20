@@ -1,80 +1,115 @@
 import {
 	Box,
-	Button,
 	Card,
-	CardActions,
+	CardActionArea,
 	CardContent,
 	CardMedia,
 	Container,
 	Grid,
+	Paper,
 	Typography,
 } from "@mui/material";
 import { SearchAndFilter } from "../components";
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4, 5, 6, 7];
 
 export const Blog = () => {
 	return (
-		<main>
-			<Box
-				sx={{
-					bgcolor: "background.paper",
-					pt: 8,
-					pb: 6,
-				}}
-			>
-				<Container maxWidth="sm">
-					<Typography
-						component="h1"
-						variant="h2"
-						align="center"
-						color="text.primary"
-						gutterBottom
-					>
-						Data Analysis Articles
-					</Typography>
-					<Typography variant="h5" align="center" color="text.secondary" paragraph>
-						Get insights on the latest tools & methods that you can use to analyze your
-						data more effectively. Our data analysis blog will help you develop your
-						skills.
-					</Typography>
-					<SearchAndFilter />
-				</Container>
-			</Box>
-			<Container sx={{ py: 8 }} maxWidth="lg">
-				{/* End hero unit */}
-				<Grid container spacing={4}>
-					{cards.map(card => (
-						<Grid item key={card} xs={12} sm={6} md={4}>
-							<Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-								<CardMedia
-									component="div"
-									sx={{
-										// 16:9
-										pt: "56.25%",
-									}}
-									image="https://source.unsplash.com/random?wallpapers"
-									title="Blog post image"
-								/>
-								<CardContent sx={{ flexGrow: 1 }}>
-									<Typography gutterBottom variant="h5" component="h2">
-										Artical Title
-									</Typography>
-									<Typography>
-										This is a media card. You can use this section to describe the
-										content.
-									</Typography>
-								</CardContent>
-								<CardActions>
-									<Button fullWidth variant="contained" size="large">
-										Read Article
-									</Button>
-								</CardActions>
-							</Card>
+		<Container maxWidth="lg">
+			<main>
+				<Paper
+					sx={{
+						position: "relative",
+						// backgroundColor: "grey.800",
+						color: "#fff",
+						mb: 4,
+						backgroundSize: "cover",
+						backgroundRepeat: "no-repeat",
+						backgroundPosition: "center",
+						backgroundImage: `url(./blog/blog1.avif)`,
+						// backgroundImage: `url(./blog/blog2.png)`,
+						// backgroundImage: `url(./blog/blog3.avif)`,
+						// backgroundImage: `url(./blog/blog4.jpg)`,
+						// backgroundImage: `url(./blog/blog5.jpg)`,
+					}}
+				>
+					{/* Increase the priority of the hero background image */}
+					{/* {<img style={{ display: "none" }} src="./course-image.png" alt="Blog image" />} */}
+					<Box
+						sx={{
+							position: "absolute",
+							top: 0,
+							bottom: 0,
+							right: 0,
+							left: 0,
+							backgroundColor: "rgba(0,0,0,.3)",
+						}}
+					/>
+					<Grid container>
+						<Grid item md={6}>
+							<Box
+								sx={{
+									position: "relative",
+									p: { xs: 3, md: 6 },
+									pr: { md: 0 },
+								}}
+							>
+								<Typography component="h1" variant="h3" color="inherit" gutterBottom>
+									Data Analysis Article
+								</Typography>
+								<Typography variant="h5" color="inherit" paragraph>
+									Get insights on the latest tools & methods that you can use to analyze
+									your data more effectively. Our data analysis blog will help you develop
+									your skills.
+								</Typography>
+								<SearchAndFilter />
+							</Box>
 						</Grid>
-					))}
-				</Grid>
-			</Container>
-		</main>
+					</Grid>
+				</Paper>
+
+				<Container sx={{ py: 8 }} maxWidth="lg">
+					{/* End hero unit */}
+					<Grid container spacing={4}>
+						{cards.map(card => {
+							return (
+								<Grid item xs={12} md={6}>
+									<CardActionArea component="a" href="#">
+										<Paper elevation={4}>
+											<Card key={card} sx={{ display: "flex" }}>
+												<CardContent sx={{ flex: 1 }}>
+													<Typography component="h2" variant="h5">
+														{/* title */}
+														Post title
+													</Typography>
+													<Typography variant="subtitle1" color="text.secondary">
+														{/* date */}
+														18 Nov
+													</Typography>
+													<Typography variant="subtitle1" paragraph>
+														{/* description */}
+														This is a media card. You can use this section to describe the
+														content.
+													</Typography>
+													<Typography variant="subtitle1" color="primary">
+														Continue reading...
+													</Typography>
+												</CardContent>
+												<CardMedia
+													component="img"
+													sx={{ width: 160, display: { xs: "none", sm: "block" } }}
+													image="./course-image.png"
+													alt="Article photo"
+												/>
+											</Card>
+										</Paper>
+									</CardActionArea>
+								</Grid>
+							);
+						})}
+					</Grid>
+				</Container>
+			</main>
+		</Container>
 	);
 };
