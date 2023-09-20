@@ -5,58 +5,56 @@ import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 
 export const Outcomes = () => {
 	return (
-		<Box maxWidth={900}>
-			<Paper elevation={6}>
-				<Box padding={4}>
-					<Typography variant="h5" component="h2" gutterBottom>
-						What you'll learn
-					</Typography>
+		<Paper elevation={6}>
+			<Box padding={4}>
+				<Typography variant="h5" component="h2" gutterBottom>
+					What you'll learn
+				</Typography>
 
-					<Grid container spacing={2} paddingTop={2}>
-						<Grid item xs={6}>
-							<Stack direction="row" spacing={1}>
-								<CheckIcon />
-								<Typography variant="caption">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-								</Typography>
-							</Stack>
-						</Grid>
-						<Grid item xs={6}>
-							<Stack direction="row" spacing={1}>
-								<CheckIcon />
-								<Typography variant="caption">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, asdf
-									asdf asdf asdf
-								</Typography>
-							</Stack>
-						</Grid>
-						<Grid item xs={6}>
-							<Stack direction="row" spacing={1}>
-								<CheckIcon />
-								<Typography variant="caption">
-									Lorem ipsum dolor sit amet consectetur
-								</Typography>
-							</Stack>
-						</Grid>
-						<Grid item xs={6}>
-							<Stack direction="row" spacing={1}>
-								<CheckIcon />
-								<Typography variant="caption">
-									Lorem ipsum dolor sit amet consec asdf asdf asdf asd fasd fa
-								</Typography>
-							</Stack>
-						</Grid>
-						<Grid item xs={6}>
-							<Stack direction="row" spacing={1}>
-								<CheckIcon />
-								<Typography variant="caption">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-								</Typography>
-							</Stack>
-						</Grid>
+				<Grid container spacing={2} paddingTop={2}>
+					<Grid item xs={6}>
+						<Stack direction="row" spacing={1}>
+							<CheckIcon />
+							<Typography variant="caption">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+							</Typography>
+						</Stack>
 					</Grid>
-				</Box>
-			</Paper>
-		</Box>
+					<Grid item xs={6}>
+						<Stack direction="row" spacing={1}>
+							<CheckIcon />
+							<Typography variant="caption">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, asdf asdf
+								asdf asdf
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6}>
+						<Stack direction="row" spacing={1}>
+							<CheckIcon />
+							<Typography variant="caption">
+								Lorem ipsum dolor sit amet consectetur
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6}>
+						<Stack direction="row" spacing={1}>
+							<CheckIcon />
+							<Typography variant="caption">
+								Lorem ipsum dolor sit amet consec asdf asdf asdf asd fasd fa
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6}>
+						<Stack direction="row" spacing={1}>
+							<CheckIcon />
+							<Typography variant="caption">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+							</Typography>
+						</Stack>
+					</Grid>
+				</Grid>
+			</Box>
+		</Paper>
 	);
 };

@@ -1,8 +1,7 @@
-import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import { Autocomplete, Checkbox, Stack, TextField } from "@mui/material";
-
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import { Autocomplete, Checkbox, Stack, TextField } from "@mui/material";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -19,6 +18,7 @@ const FilterLabel = () => {
 export const Filter = () => {
 	return (
 		<Autocomplete
+			// sx={{ width: 200, minWidth: "md" }}
 			multiple
 			id="checkboxes-tags-demo"
 			options={topics}
@@ -35,7 +35,7 @@ export const Filter = () => {
 					{option}
 				</li>
 			)}
-			style={{ width: 500 }}
+			// style={{ minWidth: "30vw" }}
 			renderInput={params => (
 				<TextField {...params} label={<FilterLabel />} placeholder="Topics" />
 			)}

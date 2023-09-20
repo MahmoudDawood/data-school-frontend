@@ -15,7 +15,7 @@ const SearchLabel = () => {
 export const Search = () => {
 	return (
 		<Autocomplete
-			sx={{ width: 600 }}
+			// sx={{ width: 300 }}
 			id="free-solo-demo"
 			freeSolo
 			options={options}

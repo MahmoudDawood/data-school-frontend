@@ -1,7 +1,7 @@
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import LanguageIcon from "@mui/icons-material/Language";
 import { Box, Grid, Link, Paper, Stack, Typography } from "@mui/material";
-import { CourseRating, Outcomes } from "../components";
+import { CourseContent, CourseRating, Outcomes } from "../components";
 
 export const Course = () => {
 	return (
@@ -42,7 +42,7 @@ export const Course = () => {
 							<Typography component="h1" variant="h3" color="inherit" gutterBottom>
 								Intermediate Data Analysis Course
 							</Typography>
-							<Typography variant="h5" color="inherit" paragraph>
+							<Typography variant="h6" color="inherit" paragraph>
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
 								laudantium debitis iusto asperiores ratione ea incidunt ipsa molestiae
 								dolore optio nemo modi nam illo voluptas praesentium earum deserunt, animi
@@ -53,16 +53,16 @@ export const Course = () => {
 								Created by <Link>Yasser Alaa</Link>
 							</Typography>
 							<Grid paddingTop={1} container spacing={2}>
-								<Grid item xs={3}>
+								<Grid item xs={4}>
 									<Stack direction="row" spacing={1}>
 										<AutorenewIcon />
-										<Typography variant="body2">Last updated</Typography>
+										<Typography variant="caption">Last updated 8/2023</Typography>
 									</Stack>
 								</Grid>
-								<Grid item xs={3}>
+								<Grid item xs={4}>
 									<Stack direction="row" spacing={1}>
 										<LanguageIcon />
-										<Typography variant="body2">Arabic</Typography>
+										<Typography variant="caption">Arabic</Typography>
 									</Stack>
 								</Grid>
 							</Grid>
@@ -71,8 +71,14 @@ export const Course = () => {
 				</Grid>
 			</Paper>
 
-			<Box m={5}>
-				<Outcomes />
+			<Box maxWidth="md">
+				<Box m={5}>
+					<Outcomes />
+				</Box>
+
+				<Box m={5}>
+					<CourseContent />
+				</Box>
 			</Box>
 		</>
 	);
