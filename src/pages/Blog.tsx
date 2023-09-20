@@ -58,7 +58,7 @@ export const Blog = () => {
 								/>
 								<CardContent sx={{ flexGrow: 1 }}>
 									<Typography gutterBottom variant="h5" component="h2">
-										Heading
+										Artical Title
 									</Typography>
 									<Typography>
 										This is a media card. You can use this section to describe the
@@ -66,8 +66,9 @@ export const Blog = () => {
 									</Typography>
 								</CardContent>
 								<CardActions>
-									<Button size="small">View</Button>
-									<Button size="small">Edit</Button>
+									<Button fullWidth variant="contained" size="large">
+										Read Article
+									</Button>
 								</CardActions>
 							</Card>
 						</Grid>

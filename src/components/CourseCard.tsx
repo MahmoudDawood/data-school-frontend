@@ -7,6 +7,7 @@ import {
 	Grid,
 	Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import { CourseRating } from "./CourseRating";
 
 export const CourseCard = () => {
@@ -36,7 +37,9 @@ export const CourseCard = () => {
 				</CardContent>
 				<CardActions>
 					<Button fullWidth variant="contained" size="large">
-						View Course
+						<Link to={"/course/1"} style={{ textDecoration: "none", color: "white" }}>
+							View Course
+						</Link>
 					</Button>
 				</CardActions>
 			</Card>
