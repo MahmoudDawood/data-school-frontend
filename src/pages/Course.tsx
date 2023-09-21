@@ -71,13 +71,15 @@ export const Course = () => {
 				</Grid>
 			</Paper>
 
-			<Box maxWidth="md">
-				<Box m={5}>
-					<Outcomes />
-				</Box>
+			<Box paddingLeft={5} maxWidth="md">
+				<Box>
+					<Box m={5}>
+						<Outcomes />
+					</Box>
 
-				<Box m={5}>
-					<CourseContent />
+					<Box m={5}>
+						<CourseContent />
+					</Box>
 				</Box>
 			</Box>
 		</>
