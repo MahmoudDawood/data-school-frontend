@@ -38,8 +38,14 @@ export const CourseCard = () => {
 						<CourseRating />
 					</CardContent>
 					<CardActions>
-						<Button fullWidth variant="contained" size="large">
-							<Link to={"/course/1"}>View Course</Link>
+						<Button
+							fullWidth
+							variant="contained"
+							size="large"
+							component={Link}
+							to="/course/1"
+						>
+							View Course
 						</Button>
 					</CardActions>
 				</Card>

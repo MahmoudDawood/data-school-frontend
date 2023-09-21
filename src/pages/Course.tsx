@@ -1,6 +1,16 @@
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import LanguageIcon from "@mui/icons-material/Language";
-import { Avatar, Box, Button, Grid, Link, Paper, Stack, Typography } from "@mui/material";
+import {
+	Avatar,
+	Box,
+	Button,
+	Divider,
+	Grid,
+	Link,
+	Paper,
+	Stack,
+	Typography,
+} from "@mui/material";
 import { CourseContent, CourseRating, Outcomes, Reviews } from "../components";
 
 const htmlContent = `
@@ -93,6 +103,7 @@ export const Course = () => {
 
 				<Box m={5}>
 					<Description />
+					<Divider />
 				</Box>
 
 				<Box m={5}>

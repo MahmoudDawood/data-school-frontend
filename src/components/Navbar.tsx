@@ -46,8 +46,8 @@ const Navbar = () => {
 					<Typography
 						variant="h6"
 						noWrap
-						// component="a"
-						// href="/"
+						component="a"
+						href="/"
 						sx={{
 							mr: 2,
 							display: { xs: "none", md: "flex" },
@@ -58,7 +58,7 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						<Link to={"/"}>DATA SCHOOL</Link>
+						DATA SCHOOL
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -91,17 +91,13 @@ const Navbar = () => {
 							}}
 						>
 							{pages.map(page => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign="center">
-										<Link
-											to={
-												page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`
-											}
-											style={{ textDecoration: "none", color: "white" }}
-										>
-											{page}
-										</Link>
-									</Typography>
+								<MenuItem
+									key={page}
+									onClick={handleCloseNavMenu}
+									component={Link}
+									to={page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`}
+								>
+									<Typography textAlign="center">{page}</Typography>
 								</MenuItem>
 							))}
 						</Menu>
@@ -110,8 +106,8 @@ const Navbar = () => {
 					<Typography
 						variant="h5"
 						noWrap
-						// component="a"
-						// href="/"
+						component="a"
+						href="/"
 						sx={{
 							mr: 2,
 							display: { xs: "flex", md: "none" },
@@ -123,7 +119,7 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						<Link to={"/"}>DATA SCHOOL</Link>
+						DATA SCHOOL
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map(page => (
@@ -131,13 +127,10 @@ const Navbar = () => {
 								key={page}
 								onClick={handleCloseNavMenu}
 								sx={{ my: 2, color: "white", display: "block" }}
+								component={Link}
+								to={page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`}
 							>
-								<Link
-									to={page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`}
-									style={{ textDecoration: "none", color: "white" }}
-								>
-									{page}
-								</Link>
+								{page}
 							</Button>
 						))}
 					</Box>
