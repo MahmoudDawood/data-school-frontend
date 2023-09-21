@@ -75,7 +75,7 @@ export const Blog = () => {
 							return (
 								<Grid item xs={12} md={6}>
 									<CardActionArea component="a" href="#">
-										<Paper elevation={4}>
+										<Paper>
 											<Card key={card} sx={{ display: "flex" }}>
 												<CardContent sx={{ flex: 1 }}>
 													<Typography component="h2" variant="h5">

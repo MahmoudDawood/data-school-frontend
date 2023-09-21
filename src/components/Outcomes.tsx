@@ -5,13 +5,18 @@ import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 
 export const Outcomes = () => {
 	return (
-		<Paper elevation={6}>
+		<Paper>
 			<Box padding={4}>
 				<Typography variant="h5" component="h2" gutterBottom>
 					What you'll learn
 				</Typography>
 
-				<Grid container spacing={2} paddingTop={2}>
+				<Grid
+					container
+					direction={{ xs: "column", md: "row" }}
+					spacing={2}
+					paddingTop={2}
+				>
 					<Grid item xs={6}>
 						<Stack direction="row" spacing={1}>
 							<CheckIcon />

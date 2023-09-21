@@ -14,7 +14,7 @@ import { CourseRating } from "./CourseRating";
 export const CourseCard = () => {
 	return (
 		<Grid item key={"Unique key"} xs={12} sm={6} md={4}>
-			<Paper elevation={4}>
+			<Paper>
 				<Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
 					<CardMedia
 						component="div"
@@ -39,9 +39,7 @@ export const CourseCard = () => {
 					</CardContent>
 					<CardActions>
 						<Button fullWidth variant="contained" size="large">
-							<Link to={"/course/1"} style={{ textDecoration: "none", color: "white" }}>
-								View Course
-							</Link>
+							<Link to={"/course/1"}>View Course</Link>
 						</Button>
 					</CardActions>
 				</Card>

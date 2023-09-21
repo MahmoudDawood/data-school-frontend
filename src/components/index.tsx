@@ -6,5 +6,6 @@ export * from "./Filter";
 export * from "./Footer";
 export * from "./Navbar";
 export * from "./Outcomes";
+export * from "./Reviews";
 export * from "./Search";
 export * from "./SearchAndFilter";

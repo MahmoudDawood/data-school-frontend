@@ -58,9 +58,7 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						<Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-							DATA SCHOOL
-						</Link>
+						<Link to={"/"}>DATA SCHOOL</Link>
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -125,9 +123,7 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						<Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-							DATA SCHOOL
-						</Link>
+						<Link to={"/"}>DATA SCHOOL</Link>
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map(page => (
