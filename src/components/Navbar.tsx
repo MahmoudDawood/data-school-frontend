@@ -16,7 +16,8 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const pages = ["Home", "Courses", "Blog", "About us?"];
+const leftPages = ["Home", "Courses", "Blog", "About us?"];
+const rightPages = ["Sign up", "Sign in"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
@@ -90,7 +91,7 @@ const Navbar = () => {
 								display: { xs: "block", md: "none" },
 							}}
 						>
-							{pages.map(page => (
+							{leftPages.concat(rightPages).map(page => (
 								<MenuItem
 									key={page}
 									onClick={handleCloseNavMenu}
@@ -102,7 +103,6 @@ const Navbar = () => {
 							))}
 						</Menu>
 					</Box>
-					<SchoolIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
 					<Typography
 						variant="h5"
 						noWrap
@@ -119,14 +119,34 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
+						<SchoolIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
 						DATA SCHOOL
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-						{pages.map(page => (
+						{leftPages.map(page => (
 							<Button
 								key={page}
 								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: "white", display: "block" }}
+								sx={{ my: 2, color: "white", display: "block", textAlign: "center" }}
+								component={Link}
+								to={page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`}
+							>
+								{page}
+							</Button>
+						))}
+					</Box>
+					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+						{rightPages.map(page => (
+							<Button
+								key={page}
+								onClick={handleCloseNavMenu}
+								sx={{
+									my: 2,
+									color: "white",
+									display: "block",
+									textAlign: "center",
+									flex: 1,
+								}}
 								component={Link}
 								to={page == "home" ? "/" : `${page.replace(" ", "-").toLowerCase()}`}
 							>
