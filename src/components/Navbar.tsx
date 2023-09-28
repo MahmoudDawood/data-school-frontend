@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 
 const leftPages = ["Home", "Courses", "Blog", "About us?"];
 const rightPages = ["Sign up", "Sign in"];
+// TODO: Fix right pages allignment
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {

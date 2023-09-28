@@ -7,6 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 
 const LessonTab = () => {
+	// TODO: Default expand only first section
 	return (
 		<Box paddingBottom={1}>
 			<Grid container direction="row" justifyContent="space-between">

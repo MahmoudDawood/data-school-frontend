@@ -5,6 +5,8 @@ import "./App.css";
 import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { AboutUs, Blog, Course, Courses, Home } from "./pages";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import theme from "./theme";
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
 				<Route path="/course/:id" element={<Course />} />
 				<Route path="/blog" element={<Blog />} />
 				<Route path="/about-us" element={<AboutUs />} />
+				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/sign-in" element={<SignIn />} />
 				<Route path="/" element={<Home />} />
 				{/* <Router exact path="*" element={} */}
 				{/* TODO: Add a default landing page 404 */}

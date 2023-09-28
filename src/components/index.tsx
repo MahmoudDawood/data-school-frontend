@@ -3,6 +3,7 @@ export * from "./CourseCard";
 export * from "./CourseContent";
 export * from "./CourseRating";
 export * from "./Filter";
+export * from "./FloatingCard";
 export * from "./Footer";
 export * from "./Navbar";
 export * from "./Outcomes";
