@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-// import YouTube from "react-youtube";
+import ReactPlayer from "react-player";
 
 function VideoPlayer() {
 	return (
@@ -12,16 +12,20 @@ function VideoPlayer() {
 					height: 0,
 				}}
 			>
-				<iframe
+				<ReactPlayer
 					className="iframe"
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/yZvFH7B6gKI?si=7SOmFMTkTRbURZsh"
-					title="YouTube video player"
-					frameBorder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowFullScreen
-				></iframe>
+					width="100%"
+					height="100%"
+					url="https://www.youtube.com/embed/yZvFH7B6gKI?si=7SOmFMTkTRbURZsh"
+					config={{
+						youtube: {
+							playerVars: { showinfo: 1 },
+						},
+						facebook: {
+							appId: "12345",
+						},
+					}}
+				/>
 			</Box>
 		</Box>
 	);

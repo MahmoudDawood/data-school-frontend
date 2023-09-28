@@ -11,6 +11,7 @@ import {
 	Stack,
 	Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const FloatingCard = () => {
 	return (
@@ -36,8 +37,8 @@ export const FloatingCard = () => {
 					fullWidth
 					variant="contained"
 					size="large"
-					// component={Link}
-					// to="/course/1"
+					component={Link}
+					to="/course/1"
 				>
 					Buy now
 				</Button>
@@ -56,6 +57,12 @@ export const FloatingCard = () => {
 					</Grid>
 					<Grid item xs={4}>
 						<Stack direction="row" spacing={1}>
+							<PhoneIphoneOutlinedIcon fontSize="small" />
+							<Typography variant="caption">Access on mobile and TV</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={4}>
+						<Stack direction="row" spacing={1}>
 							<AllInclusiveIcon fontSize="small" />
 							<Typography variant="caption">Full lifetime access</Typography>
 						</Stack>
@@ -64,12 +71,6 @@ export const FloatingCard = () => {
 						<Stack direction="row" spacing={1}>
 							<EmojiEventsIcon fontSize="small" />
 							<Typography variant="caption">Certificate of completion</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={4}>
-						<Stack direction="row" spacing={1}>
-							<PhoneIphoneOutlinedIcon fontSize="small" />
-							<Typography variant="caption">Access on mobile and TV</Typography>
 						</Stack>
 					</Grid>
 				</Grid>
