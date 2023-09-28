@@ -93,9 +93,9 @@ export const Course = () => {
 				</Grid>
 			</Paper>
 
-			<Grid container direction="row-reverse" padding={{ md: 5, xs: 2 }}>
-				<Grid item xs={12} lg={4}>
-					<Box m={{ md: 5, xs: 1 }}>
+			<Grid container direction="row-reverse" padding={{ xs: 2, md: 5 }}>
+				<Grid item xs={12} lg={4} paddingBottom={{ xs: 4 }}>
+					<Box m={{ xs: 1, md: 5 }}>
 						<FloatingCard />
 					</Box>
 				</Grid>

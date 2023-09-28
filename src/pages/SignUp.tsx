@@ -10,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
-export default function SignUp() {
+export const SignUp = () => {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
@@ -99,4 +99,4 @@ export default function SignUp() {
 			</Box>
 		</Container>
 	);
-}
+};

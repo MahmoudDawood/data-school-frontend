@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 function VideoPlayer() {
 	return (
-		<Box padding={{ xs: 4, lg: 3 }}>
+		<Box padding={{ xs: 2, lg: 4 }}>
 			<Box
 				sx={{
 					position: "relative",

@@ -4,9 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { AboutUs, Blog, Course, Courses, Home } from "./pages";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import { AboutUs, Blog, Course, Courses, Home, SignIn, SignUp, Watch } from "./pages";
 import theme from "./theme";
 
 function App() {
@@ -26,6 +24,7 @@ function App() {
 				<Route path="/about-us" element={<AboutUs />} />
 				<Route path="/sign-up" element={<SignUp />} />
 				<Route path="/sign-in" element={<SignIn />} />
+				<Route path="/watch" element={<Watch />} />
 				<Route path="/" element={<Home />} />
 				{/* <Router exact path="*" element={} */}
 				{/* TODO: Add a default landing page 404 */}
