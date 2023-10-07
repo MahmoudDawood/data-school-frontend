@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import ReactPlayer from "react-player";
 
-function VideoPlayer() {
+export const VideoPlayer = () => {
 	return (
 		<Box padding={{ xs: 2, lg: 4 }}>
 			<Box
@@ -29,6 +29,4 @@ function VideoPlayer() {
 			</Box>
 		</Box>
 	);
-}
-
-export default VideoPlayer;
+};

@@ -17,8 +17,8 @@ import {
 	FloatingCard,
 	Outcomes,
 	Reviews,
+	VideoPlayer,
 } from "../components";
-import VideoPlayer from "../components/VideoPlayer";
 
 const htmlContent = `
 <div class="course-container"><h2>Course Overview</h2><p>Our Data Analysis Course is designed to equip you with the knowledge and tools needed to analyze data effectively. Whether you're a beginner or an experienced data enthusiast, this course will help you develop valuable skills in data analysis and visualization.				</p>		<h2>Course Highlights</h2>		<ul>		<li>Introduction to data analysis concepts</li>				<li>Data cleaning and preprocessing techniques</li>				<li>Statistical analysis and hypothesis testing</li>				<li>Data visualization with industry-standard tools</li>				<li>Real-world case studies and projects</li>		</ul>		<h2>Who Should Attend</h2>		<p>				This course is suitable for:		</p>		<ul>				<li>Students and graduates seeking data analysis skills</li>				<li>Professionals looking to enhance their data analysis capabilities</li>				<li>Anyone interested in leveraging data for informed decision-making</li>		</ul>		<h2>Course Schedule</h2>		<p>				Duration: 12 weeks<br>				Start Date: [Insert Start Date]<br>				End Date: [Insert End Date]<br>				Class Times: [Insert Class Times]		</p>		<h2>Registration</h2>		<p>				To register for the Data Analysis Course, please fill out the registration form on our website or contact our admissions team.		</p></div>`;

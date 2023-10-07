@@ -10,3 +10,4 @@ export * from "./Outcomes";
 export * from "./Reviews";
 export * from "./Search";
 export * from "./SearchAndFilter";
+export * from "./VideoPlayer";

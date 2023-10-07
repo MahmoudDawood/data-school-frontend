@@ -12,7 +12,9 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<Navbar />
+
+			{window.location.pathname !== "/watch" && <Navbar />}
+			{/* <Navbar /> */}
 			<Routes>
 				{["/", "/home"].map(path => (
 					<Route path={path} element={<Home />} />
@@ -29,7 +31,8 @@ function App() {
 				{/* <Router exact path="*" element={} */}
 				{/* TODO: Add a default landing page 404 */}
 			</Routes>
-			<Footer />
+
+			{window.location.pathname !== "/watch" && <Footer />}
 		</ThemeProvider>
 	);
 }
